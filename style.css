@@ -1,0 +1,136 @@
+* {
+    transition: .4s;
+}
+
+html { background: url('images.jpeg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+body {
+    background-color: rgba(139, 69, 19, 0);
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.img {
+    margin-top: 300px;
+}
+
+.img h1 {
+    text-align: center;
+}
+
+.img .text {
+    justify-content: center;
+    text-align: center;
+}
+
+.img .text a {
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(230, 0, 255);
+    /* backdrop-filter: blur(100px); */
+    padding: 8px 16px;
+}
+
+img {
+    border: 2px solid black;
+    border-radius: 50%;
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar layar */
+    max-height: 100vh; /* Pastikan gambar tidak melebihi tinggi layar */
+}
+
+img .clicked {
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        align-items: center;
+        max-width: 100%;
+        max-height: 100vh;
+    }
+
+    .img {
+        margin-top: -40px;
+    }
+}
+
+* {
+    transition: .4s;
+}
+
+.slideRadio {
+    padding: 10px 50px;
+}
+
+.slideRadio p {
+    padding: 0 100px 0 0;
+}
+
+.switch {
+    display: flex;
+    /* position: relative; */
+    /* position: fixed; */
+    position: absolute;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    float: right;
+}
+
+.slider {
+    border: 2px solid rgb(255, 255, 255);
+    display: inline-block;
+    cursor: pointer;
+    /* position: relative; */
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 10px 3px rgb(0, 37, 31);
+}
+
+/* .slider .clicked {
+    border-radius: 10px;
+} */
+
+.slider::before {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #000000;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider::before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
